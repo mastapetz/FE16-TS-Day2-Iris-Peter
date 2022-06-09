@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+
+
+<body>
+    <div class=" card">
+        <div class="card-header d-flex justify-content-between bg-transparent">
+            ${this.model} by ${this.maker}
+        </div>
+        <img src="${this.image}" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+            <div class="card-title text-center h5">${this.model}<br> ${this.bodyType}
+            </div>
+            <hr>
+            <div class="card-text">
+                ${this.kilometers} km <br>
+                B License enough: ${this.bLicenceSuff}<br>
+                Empty Weight: ${this.emptyWeight}<br>
+                Max Load Weight: ${this.maxLoadWeight} <br>
+                Seats: ${this.numberOfSeats}
+                Fuel Type: ${this.fuelType} <br>
+                PS: ${this.PS}
+            </div>
+
+
+            <p>
+                <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrice"
+                    aria-expanded="false" aria-controls="collapsePrice">Show Price
+                </button>
+            </p>
+            <div class="collapse" id="collapsePrice">
+                <div class="card card-body">Price: ${this.price}</div>
+            </div>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
