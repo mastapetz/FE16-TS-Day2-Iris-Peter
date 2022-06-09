@@ -6,7 +6,7 @@ class vehicles{
     kilometers: number;
     price: number;
     PS: number;
-    numberOfSeats: number;
+    numberOfSeats?: number;
     fuelType: string;
     constructor(image: string, maker: string, model: string, buildYear: number, kilometers: number, price: number, PS: number, numberOfSeats: number, fuelType: string){
         this.image =image;
@@ -70,6 +70,40 @@ class trucks extends vehicles{
           Empty Weight: ${this.emptyWeight}<br>
           Max Load Weight: ${this.maxLoadWeight} </div>
           <div class="card-text">numberOfSeats Type: ${this.numberOfSeats}  </div>
+          <div class="card-text">Fuel Type: ${this.fuelType}  </div>
+          <div class="card-text">PS: ${this.PS}  </div>
+
+        </div>
+        <div class="card-footer bg-transparent text-center">
+        <div class="card-text">Price: ${this.price}  </div>
+          
+          </div>
+    </div> `;
+    }
+}
+
+class motorBikes extends vehicles{
+    ageLimit: boolean;
+    canDriveWithB: boolean;
+    constructor(image: string, maker: string, model: string, buildYear: number, kilometers: number, price: number, PS: number, numberOfSeats: number, fuelType: string, ageLimit: boolean, canDriveWithB: boolean){
+        super( image, maker, model, buildYear, kilometers, price, PS, numberOfSeats, fuelType)
+        this.ageLimit =ageLimit;
+        this.canDriveWithB = canDriveWithB;
+    }
+    bikeInfo(){
+        return 
+        `    <div class="card">
+        <div class="card-header d-flex justify-content-between bg-transparent">
+          <div>${this.model} by ${this.maker} </div>
+        </div>
+        <img src="${this.image}" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <div class="card-title text-center h5">${this.model}</div><br>
+          <hr>
+          <div class="card-text">${this.kilometers}</div>
+          <div class="card-text">Can drive with B: ${this.canDriveWithB}  </div>
+          <div class="card-text">Has age limit: ${this.ageLimit}  </div>
+
           <div class="card-text">Fuel Type: ${this.fuelType}  </div>
           <div class="card-text">PS: ${this.PS}  </div>
 
