@@ -1,4 +1,5 @@
 "use strict";
+var _a;
 class vehicles {
     constructor(image, maker, model, buildYear, kilometers, price, PS, numberOfSeats, fuelType) {
         this.image = image;
@@ -34,6 +35,7 @@ class vehicles {
     </div> `;
     }
 }
+let ente = new vehicles("#", "Citroën", "2CV", 1988, 99000, 7000, 40, 4, "normal");
 class trucks extends vehicles {
     constructor(image, maker, model, buildYear, kilometers, price, PS, numberOfSeats, fuelType, bLicenceSuff, bodyType, maxLoadWeight, emptyWeight) {
         super(image, maker, model, buildYear, kilometers, price, PS, numberOfSeats, fuelType);
@@ -68,6 +70,7 @@ class trucks extends vehicles {
     </div> `;
     }
 }
+let ram = new trucks("#", "Chrysler", "Dodge Ram", 2022, 0, 54000, 308, 6, "normal", true, "Pickup Quad-Cab", 8000, 34000);
 class motorBikes extends vehicles {
     constructor(image, maker, model, buildYear, kilometers, price, PS, numberOfSeats, fuelType, ageLimit, canDriveWithB) {
         super(image, maker, model, buildYear, kilometers, price, PS, numberOfSeats, fuelType);
@@ -99,3 +102,4 @@ class motorBikes extends vehicles {
     </div> `;
     }
 }
+let mofaMaxi = new motorBikes("#", "Steyr Daimler Puch", "N2", 1992, 20000, 10000, 1.2, 1, "normal", false, true)((_a = document.querySelector(("ouput-cars"))) === null || _a === void 0 ? void 0 : _a.innerHTML);

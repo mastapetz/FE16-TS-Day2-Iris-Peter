@@ -42,7 +42,7 @@ class vehicles{
     </div> `;
     }
 }
-
+let ente =new vehicles("#","Citroën","2CV", 1988, 99000, 7000,40,4, "normal");
 class trucks extends vehicles{
     bLicenceSuff: boolean;
     bodyType: string;
@@ -81,7 +81,7 @@ class trucks extends vehicles{
     </div> `;
     }
 }
-
+let ram = new trucks("#","Chrysler","Dodge Ram",2022, 0, 54000,308,6,"normal",true,"Pickup Quad-Cab",8000,34000);
 class motorBikes extends vehicles{
     ageLimit: boolean;
     canDriveWithB: boolean;
@@ -115,3 +115,7 @@ class motorBikes extends vehicles{
     </div> `;
     }
 }
+
+let mofaMaxi = new motorBikes("#","Steyr Daimler Puch", "N2",1992,20000,10000,1.2,1,"normal",false,true)
+
+(document.querySelector(("ouput-cars") as HTMLElement)?.innerHTML
